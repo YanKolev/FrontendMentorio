@@ -1,28 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | QR code component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  Improve your front-end skills by building projects
+    <title>Frontend Mentor | QR code component</title>
 
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      /* design works for 1440 dekstop version */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        background-color: hsl(212, 45%, 89%);
+        font-family: "Courier New", Courier, monospace;
+        font-weight: 400;
+        line-height: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+      }
+      .container-box {
+        background-color: hsl(0, 0%, 100%);
+        width: 400px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9px;
+        margin-bottom: 14px;
+      }
+
+      .code {
+        width: 360px;
+        height: 360px;
+        border-radius: 9px;
+        margin-bottom: 14px;
+        margin-top: 14px;
+        margin-left:14px;
+        margin-right: 14px;
+      }
+      .text-box {
+        width: 320px;
+        height: 220px;
+      }
+      .heading {
+        font-size: 19px;
+        margin-bottom: 14px;
+        color:hsl(218, 44%, 22%);
+        text-align: center;
+        
+      }
+      .para {
+        font-size: 15px;
+        text-align: center;
+        color:hsl(216, 15%, 48%) ;
+      }
+
+      /* Need media query for phone- 375px */
+      @media (max-width: 375px) {
+        .code { 
+          max-width: 80%;
+          margin-left: 50px;
+
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">YanKolev</a>.
+    </div>
+
+    <div class="container-box">
+      <div class="image-box">
+        <img class="code" src="images/image-qr-code.png" />
+      </div>
+      <div class="text-box">
+        <h2 class="heading">
+          Improve your front-end <break> skills by building projects
+        </h2>
+        <p class="para">
+          Scan the QR code to visit Frontend Mentor and take your coding skills
+          to the next level
+        </p>
+      </div>
+    </div>
+  </body>
 </html>

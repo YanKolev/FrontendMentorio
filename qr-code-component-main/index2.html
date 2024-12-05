@@ -22,7 +22,6 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      /* design works for 1440 dekstop version */
       * {
         padding: 0;
         margin: 0;
@@ -37,70 +36,45 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+
       body {
+        min-height: 100vh;
         background-color: hsl(212, 45%, 89%);
-        font-family: "Courier New", Courier, monospace;
-        font-weight: 400;
-        line-height: 1;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-        gap: 18px;
+        justify-content: center;
+        flex-direction: column;
       }
+      
       .container-box {
-        background-color: hsl(0, 0%, 100%);
-        width: 400px;
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border-radius: 9px;
-        margin-bottom: 14px;
+        background-color:hsl(0, 0%, 100%) ;
+        width: 350px;
+        height: 100%;
+        text-align: center;
+        box-shadow: 16px 17px 19px rgba(0, 0, 0, 0.1);
+        border-radius: 1rem;
+
+      }
+      .image-box {
+        margin: 10% auto;
       }
 
       .code {
-        width: 360px;
-        height: 360px;
-        border-radius: 9px;
-        margin-bottom: 14px;
-        margin-top: 14px;
-        margin-left:14px;
-        margin-right: 14px;
+        width: 300px;
+        border-radius: 1rem;
+
       }
-      .text-box {
-        width: 320px;
-        height: 220px;
-      }
-      .heading {
-        font-size: 19px;
-        margin-bottom: 14px;
+
+      .image-box h2 {
         color:hsl(218, 44%, 22%);
-        text-align: center;
-        
+        font-weight: 700;
+        margin: 5% auto;
       }
-      .para {
-        font-size: 15px;
-        text-align: center;
-        color:hsl(216, 15%, 48%) ;
+      .image-box p { 
+        color:hsl(216, 15%, 48%);
+        font-weight: 400;
+        margin: 1rem 0;
       }
-
-      /* Need media query for phone- 375px */
-      @media (max-width: 375px) {
-        .image-box { 
-          display: flex ;
-          justify-content: center;
-          align-items: center;
-          
-        }
-        
-        .code{ 
-          max-width: 80%;
-        }
-        
-      }
-
     </style>
   </head>
   <body>
@@ -114,17 +88,15 @@
     <div class="container-box">
       <div class="image-box">
         <img class="code" src="images/image-qr-code.png" alt= "QR code"/>
-      </div>
-      <div class="text-box">
-        <h2 class="heading">
+        <h2>
           Improve your front-end <break> skills by building projects
         </h2>
-        <p class="para">
+        <p>
           Scan the QR code to visit Frontend Mentor and take your coding skills
           to the next level
         </p>
       </div>
+    
     </div>
   </body>
 </html>
-

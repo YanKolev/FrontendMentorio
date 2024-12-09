@@ -24,6 +24,8 @@
       }
 
       .attribution {
+        margin-top: 50px;
+        padding-top: 50px;
         font-size: 11px;
         text-align: center;
       }
@@ -44,11 +46,31 @@
         width: 350px;
         height: 100%;
         text-align: center;
-        box-shadow: 16px 17px 19px rgba(0, 0, 0, 0.5);
+        box-shadow: 16px 17px 19px rgba(0, 0, 0, 0.843);
         border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
       }
       .card-illustration {
         margin: 10% auto;
+      }
+      .learning {
+        margin-bottom: 15px;
+        margin-right: 10px;
+      }
+      .publish {
+        margin-bottom: 15px;
+      }
+      h2 {
+        margin-bottom: 15px;
+      }
+      .author-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
       }
     </style>
   </head>
@@ -155,14 +177,15 @@
         </svg>
       </div>
 
-      <p><strong>Learning</strong></p>
-      <p>Published 21 Dec 2023</p>
+      <p class="learning"><strong>Learning</strong></p>
+      <p class="publish">Published 21 Dec 2023</p>
       <h2>HTML & CSS foundations</h2>
       <p>
         These languages are the backbone of every website, defining structure,
         content,
         <break>and presentation</break>.
       </p>
+
       <div class="author-box">
         <img
           class="author image"

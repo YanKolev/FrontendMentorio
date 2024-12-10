@@ -43,22 +43,38 @@
       }
       .card {
         background-color: hsl(0, 0%, 100%);
-        width: 350px;
-        height: 100%;
+        width: 90%; /* Makes the card responsive to screen size */
+        max-width: 350px; /* Ensures the card doesn't exceed this width */
+        height: auto; /* Allows the card to adjust height dynamically */
         text-align: center;
-        box-shadow: 16px 17px 19px rgba(0, 0, 0, 0.843);
+        box-shadow: 16px 17px 19px rgba(0, 0, 0, 1);
         border-radius: 1rem;
+        border: 2px solid hsl(240, 6%, 9%); /* Adds a border around the card */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        margin: 10px 10px 10px 10px;
+        padding: 10px 10px 10px 10px;
       }
       .card-illustration {
-        margin: 10% auto;
+        width: 100%; /* Makes the illustration adapt to the card's width */
+        max-width: 350px; /* Ensures it doesn't exceed the card's maximum width */
+        height: auto; /* Maintains aspect ratio */
+        margin-bottom: 15px;
+        border-radius: 15px; /* Rounds off the corners */
+        overflow: hidden; /* Prevents content from overflowing */
+        /* width: 200px;
+        height: 200px;
+        margin-bottom: 15px;
+        border-radius: 15px; */
       }
       .learning {
         margin-bottom: 15px;
-        margin-right: 10px;
+        margin-right: 100px;
+        background-color: hsl(47, 88%, 63%);
+        font-size: 16px;
+        font-weight: 500;
       }
       .publish {
         margin-bottom: 15px;
@@ -66,11 +82,30 @@
       h2 {
         margin-bottom: 15px;
       }
+      .inside-text {
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 15px;
+      }
       .author-box {
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-end;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 15px;
+      }
+      .author-box img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        overflow: hidden;
+        object-position: center;
+      }
+      .author-name {
+        font-size: 15px;
+        font-weight: 800;
+        text-align: center;
+        padding-top: 8px;
       }
     </style>
   </head>
@@ -180,10 +215,11 @@
       <p class="learning"><strong>Learning</strong></p>
       <p class="publish">Published 21 Dec 2023</p>
       <h2>HTML & CSS foundations</h2>
-      <p>
+
+      <p class="inside-text">
         These languages are the backbone of every website, defining structure,
         content,
-        <break>and presentation</break>.
+        <break>and presentation.</break>
       </p>
 
       <div class="author-box">
@@ -192,7 +228,7 @@
           src="assets/images/image-avatar.webp"
           alt="Image of author Greg Hopper"
         />
-        <p>Greg Hooper</p>
+        <p class="author-name">Greg Hooper</p>
       </div>
     </div>
 

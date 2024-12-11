@@ -1,34 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Social links profile</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Social links profile</title>
 
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        font-family: "Figtree", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        background-color: hsl(0, 0%, 8%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .main-container {
+        width: 90%; /* Makes the card responsive to screen size */
+        max-width: 350px; /* Ensures the card doesn't exceed this width */
+        height: auto; /* Allows the card to adjust height dynamically */
+        background-color: hsl(0, 0%, 12%);
+        text-align: center;
+      }
 
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      img {
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="image">
+        <img
+          src="assets/images/avatar-jessica.jpeg"
+          alt="Profile picture of Jessica Randall"
+        />
+      </div>
+      <div class="name"><h1>Jessica Randall</h1></div>
+      <div class="location"><p>London, United Kingdom</p></div>
+      <div class="quote"><p>"Front-end developer and avid reader."</p></div>
+
+      <div class="link-tree">
+        <div class="GitHub">GitHub</div>
+        <div class="Frontend Mentor">Frontend Mentor</div>
+        <div class="LinkedIn">LinkedIn</div>
+        <div class="Twitter">Twitter</div>
+        <div class="Instagram">Instagram</div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">YanKolev</a>.
+    </div>
+  </body>
 </html>

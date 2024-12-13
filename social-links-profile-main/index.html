@@ -31,9 +31,14 @@
       .attribution {
         font-size: 11px;
         text-align: center;
+        color: hsl(0, 0%, 100%);
       }
       .attribution a {
-        color: hsl(228, 45%, 44%);
+        color: hsl(70, 57%, 75%);
+      }
+      .attribution:hover,
+      .attribution a:hover {
+        color: hsl(72, 23%, 91%);
       }
       body {
         background-color: hsl(0, 0%, 8%);
@@ -48,10 +53,58 @@
         height: auto; /* Allows the card to adjust height dynamically */
         background-color: hsl(0, 0%, 12%);
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 15%;
       }
 
       img {
         border-radius: 50%;
+        margin-bottom: 10px;
+      }
+      .name {
+        font-size: 14px;
+        font-weight: 500;
+        color: hsl(0, 0%, 100%);
+        margin-bottom: 10px;
+      }
+      .location {
+        font-size: 14px;
+        font-weight: 600;
+        color: hsl(75, 94%, 57%);
+        margin-bottom: 5px;
+      }
+      .quote {
+        color: hsl(0, 0%, 100%);
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .link-tree {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-content: center;
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .socmedia {
+        height: 65px;
+        width: auto;
+        /* border: 1px solid white; */
+        border-radius: 15px;
+        background-color: hsl(0, 0%, 20%);
+        color: hsl(0, 0%, 100%);
+        line-height: 4.5;
+        margin: 5px 10px 5px 10px;
+      }
+
+      .socmedia:hover {
+        cursor: pointer;
+        background-color: hsl(75, 94%, 57%);
+        color: hsl(0, 0%, 20%);
       }
     </style>
   </head>
@@ -68,11 +121,11 @@
       <div class="quote"><p>"Front-end developer and avid reader."</p></div>
 
       <div class="link-tree">
-        <div class="GitHub">GitHub</div>
-        <div class="Frontend Mentor">Frontend Mentor</div>
-        <div class="LinkedIn">LinkedIn</div>
-        <div class="Twitter">Twitter</div>
-        <div class="Instagram">Instagram</div>
+        <div class="socmedia">GitHub</div>
+        <div class="socmedia">Frontend Mentor</div>
+        <div class="socmedia">LinkedIn</div>
+        <div class="socmedia">Twitter</div>
+        <div class="socmedia">Instagram</div>
       </div>
     </div>
 

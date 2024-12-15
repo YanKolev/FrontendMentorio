@@ -11,11 +11,19 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
+      /> -->
+
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/figtree/v6/_Xmu-HUzqDCFdgfMm4GND65o.woff2 format('woff2')"
+      crossorigin
+      as="font"
+      type="font/woff2"
     />
 
     <title>Frontend Mentor | Social links profile</title>
@@ -28,83 +36,104 @@
         padding: 0;
         box-sizing: border-box;
       }
+      :root {
+        /* Colors */
+        --grey-900-color: hsl(0, 0%, 8%);
+        --grey-800-color: hsl(0, 0%, 12%);
+        --grey-700-color: hsl(0, 0%, 20%);
+        --main-green: hsl(75, 94%, 57%);
+        --main-white: hsl(0, 0%, 100%);
+        --second-green: hsl(70, 57%, 75%);
+        --second-white: hsl(72, 23%, 91%);
+        /* Topography */
+        --main-font-size: 1.4rem;
+      }
       .attribution {
         font-size: 11px;
         text-align: center;
-        color: hsl(0, 0%, 100%);
+        color: var(--main-white);
       }
       .attribution a {
-        color: hsl(70, 57%, 75%);
+        color: var(--second-green);
       }
       .attribution:hover,
       .attribution a:hover {
-        color: hsl(72, 23%, 91%);
+        color: var(--second-white);
       }
       body {
-        background-color: hsl(0, 0%, 8%);
+        background-color: var(--grey-900-color);
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
       }
       .main-container {
-        width: 90%; /* Makes the card responsive to screen size */
-        max-width: 350px; /* Ensures the card doesn't exceed this width */
+        width: 85%; /* Makes the card responsive to screen size */
+        max-width: 375px; /* Ensures the card doesn't exceed this width */
         height: auto; /* Allows the card to adjust height dynamically */
-        background-color: hsl(0, 0%, 12%);
+        background-color: var(--grey-800-color);
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: 15%;
+        margin-top: 25vh;
       }
 
       img {
+        height: 100;
+        width: 100;
         border-radius: 50%;
         margin-bottom: 10px;
+        margin-top: 20px;
       }
-      .name {
-        font-size: 14px;
+      h1 {
         font-weight: 500;
-        color: hsl(0, 0%, 100%);
+        color: var(--main-white);
         margin-bottom: 10px;
       }
       .location {
-        font-size: 14px;
+        font-size: var(--main-font-size);
         font-weight: 600;
-        color: hsl(75, 94%, 57%);
+        color: var(--main-green);
         margin-bottom: 5px;
       }
       .quote {
-        color: hsl(0, 0%, 100%);
-        font-size: 14px;
+        color: var(--main-white);
+        font-size: var(--main-font-size);
         font-weight: 600;
         margin-bottom: 10px;
       }
       .link-tree {
         display: flex;
         flex-direction: column;
-        gap: 10px;
         justify-content: center;
         align-content: center;
-        font-size: 15px;
+        font-size: var(--main-font-size);
         font-weight: 700;
       }
       .socmedia {
-        height: 65px;
-        width: auto;
-        /* border: 1px solid white; */
-        border-radius: 15px;
-        background-color: hsl(0, 0%, 20%);
-        color: hsl(0, 0%, 100%);
-        line-height: 4.5;
-        margin: 5px 10px 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0.5rem 5.5rem 0.5rem;
+        border-radius: 8px;
+        max-width: fit-content;
+        margin: 15px auto;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        background-color: var(--grey-700-color);
+        line-height: 2;
+      }
+
+      .link-tree li a {
+        text-decoration: none;
+        color: var(--main-white);
       }
 
       .socmedia:hover {
         cursor: pointer;
-        background-color: hsl(75, 94%, 57%);
-        color: hsl(0, 0%, 20%);
+        background-color: var(--main-green);
+        color: var(--grey-700-color);
       }
     </style>
   </head>
@@ -113,19 +142,40 @@
       <div class="image">
         <img
           src="assets/images/avatar-jessica.jpeg"
-          alt="Profile picture of Jessica Randall"
+          alt="Jessica Randall"
+          loading="lazy"
         />
       </div>
-      <div class="name"><h1>Jessica Randall</h1></div>
-      <div class="location"><p>London, United Kingdom</p></div>
-      <div class="quote"><p>"Front-end developer and avid reader."</p></div>
+      <h1>Jessica Randall</h1>
+      <p class="location">London, United Kingdom</p>
+      <p class="quote">"Front-end developer and avid reader."</p>
 
       <div class="link-tree">
-        <div class="socmedia">GitHub</div>
-        <div class="socmedia">Frontend Mentor</div>
-        <div class="socmedia">LinkedIn</div>
-        <div class="socmedia">Twitter</div>
-        <div class="socmedia">Instagram</div>
+        <li>
+          <a class="socmedia" target="_blank" rel="noopener noreferrer" href="#"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a class="socmedia" target="_blank" rel="noopener noreferrer" href="#"
+            >Frontend Mentor</a
+          >
+        </li>
+        <li>
+          <a class="socmedia" target="_blank" rel="noopener noreferrer" href="#"
+            >LinkedIn</a
+          >
+        </li>
+        <li>
+          <a class="socmedia" target="_blank" rel="noopener noreferrer" href="#"
+            >Twitter</a
+          >
+        </li>
+        <li>
+          <a class="socmedia" target="_blank" rel="noopener noreferrer" href="#"
+            >Instagram</a
+          >
+        </li>
       </div>
     </div>
 

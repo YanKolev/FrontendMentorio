@@ -39,7 +39,7 @@
       }
       body {
         background-color: hsl(212, 45%, 89%);
-        font-family: "Courier New", Courier, monospace;
+        font-family: 'Outfit','Rubik', sans-serif;
         font-weight: 400;
         line-height: 1;
         display: flex;
@@ -50,8 +50,8 @@
       }
       .container-box {
         background-color: hsl(0, 0%, 100%);
-        width: 400px;
-        height: 600px;
+        width: 320px;
+        height: 500px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -61,29 +61,32 @@
       }
 
       .code {
-        width: 360px;
+        width: 90%;
         height: 360px;
         border-radius: 9px;
-        margin-bottom: 14px;
-        margin-top: 14px;
-        margin-left:14px;
-        margin-right: 14px;
+        margin: 14px auto;
       }
       .text-box {
         width: 320px;
         height: 220px;
+        /* NB!  */
+        padding: 0 20px; 
       }
       .heading {
         font-size: 19px;
-        margin-bottom: 14px;
+        margin-bottom: 10px;
         color:hsl(218, 44%, 22%);
         text-align: center;
+        /* NB! margin from 14->10 */
+
         
       }
       .para {
-        font-size: 15px;
+        font-size: 14px;
         text-align: center;
         color:hsl(216, 15%, 48%) ;
+        /* NB */
+        line-height: 1.5;
       }
 
       /* Need media query for phone- 375px */
@@ -93,6 +96,16 @@
           justify-content: center;
           align-items: center;
           
+        }
+        .container-box {
+          width: 90%;
+          height: auto;
+        }
+        .heading {
+          font-size: 16px;
+        }
+        .para {
+          font-size: 12px;
         }
         
         .code{ 

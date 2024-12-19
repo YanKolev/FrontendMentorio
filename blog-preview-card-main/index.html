@@ -47,15 +47,20 @@
         max-width: 350px; /* Ensures the card doesn't exceed this width */
         height: auto; /* Allows the card to adjust height dynamically */
         text-align: center;
-        box-shadow: 16px 17px 19px rgba(0, 0, 0, 1);
+        /* box-shadow: 16px 17px 19px rgba(0, 0, 0, 1);  too harsh shadow*/
+        /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); */
+        /* experiment with double shadows */
+        /* The first part (0px 10px 20px rgba(0, 0, 0, 0.2)) creates the large, diffused outer shadow.
+        The second part (0px 6px 6px rgba(0, 0, 0, 0.1)) adds a smaller, sharper shadow closer to the card. */
+        box-shadow: 10px 10px rgba(0, 0, 0, 0.8), 0px 6px 6px rgba(0, 0, 0, 0.1);
         border-radius: 1rem;
         border: 2px solid hsl(240, 6%, 9%); /* Adds a border around the card */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        margin: 10px 10px 10px 10px;
-        padding: 10px 10px 10px 10px;
+        margin: 1rem;
+        padding: 1rem;
       }
       .card-illustration {
         width: 100%; /* Makes the illustration adapt to the card's width */
@@ -70,29 +75,42 @@
         border-radius: 15px; */
       }
       .learning {
-        margin-bottom: 15px;
-        margin-right: 100px;
         background-color: hsl(47, 88%, 63%);
-        font-size: 16px;
-        font-weight: 500;
+        color: white;
+        /* margin-bottom: 10px;
+        margin-right: 100px; */
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 2px 8px;
+        border-radius: 4px;
+        display: inline-block;
       }
       .publish {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
       }
       h2 {
         margin-bottom: 15px;
+        font-weight: 700;
+        font-size: 1.4rem;
       }
       .inside-text {
         text-align: left;
-        font-size: 16px;
+        font-size: 0.9rem;
         font-weight: 500;
         margin-bottom: 15px;
       }
+      .inside-text,
+      .publish {
+        font-size: 0.9rem;
+      }
       .author-box {
+        margin-top: 15px;
         display: flex;
-        justify-content: space-between;
+        gap: 10px;
         align-items: center;
-        margin-right: 15px;
+        /* justify-content: space-between;
+        align-items: center;
+        margin-right: 15px; */
       }
       .author-box img {
         width: 30px;
@@ -100,6 +118,7 @@
         border-radius: 50%;
         overflow: hidden;
         object-position: center;
+        border: 2px solid #ddd;
       }
       .author-name {
         font-size: 15px;

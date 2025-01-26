@@ -68,11 +68,23 @@
         display: flex;
         gap: 10px;
       }
+
+      .main-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 1px red solid;
+      }
+
       .card {
+        margin: 15px;
+        padding: 10px;
         height: 300px;
         width: 300px;
         background-color: var(--light-gray);
         box-shadow: 10px 10px rgba(0, 0, 0, 0.2), 0px 6px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid blue;
       }
     </style>
   </head>
@@ -84,13 +96,14 @@
     optimal team for your project Karma Regularly evaluates our talent to ensure
     quality Calculator Uses data from past projects to provide better delivery
     estimates -->
-
-    <h1>Reliable, efficient delivery</h1>
-    <h1>Powered by Technology</h1>
-    <p>
-      Our Artificial Intelligence powered tools use millions of project data
-      points to ensure that your project is successful
-    </p>
+    <div class="main-info">
+      <h1 class="pale">Reliable, efficient delivery</h1>
+      <h1 class="bold">Powered by Technology</h1>
+      <p>
+        Our Artificial Intelligence powered tools use millions of project data
+        points to ensure that your project is successful
+      </p>
+    </div>
     <div class="card-box">
       <div class="card">
         <h4>Supervisor</h4>

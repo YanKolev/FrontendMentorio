@@ -63,19 +63,15 @@
         font-style: normal;
       }
 
-      .body {
+      /* .body {
         background-color: var(--gray-blue);
       }
-      /* to do : 
-       make all cards equal,
-       style them with flexbox, 
-       resize everything add top line of color =
-       border to-color 
-       possibility of 2 shadows for the floating effect
+      /* to do :
        media query? possibly 80% ??  */
       .attribution {
         font-size: 11px;
         text-align: center;
+        margin-top: 300px;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -84,7 +80,9 @@
 
       .card-box {
         display: flex;
-        gap: 10px;
+        /* gap: 10px; */
+        justify-content: center;
+        align-items: center;
       }
 
       .main-info {
@@ -101,8 +99,46 @@
         height: 300px;
         width: 300px;
         background-color: var(--light-gray);
-        box-shadow: 10px 10px rgba(0, 0, 0, 0.2), 0px 6px 6px rgba(0, 0, 0, 0.1);
-        border: 1px solid blue;
+        /* box-shadow: 10px 10px rgba(0, 0, 0, 0.2), 0px 6px 6px rgba(0, 0, 0, 0.1); */
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2), 0px 6px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        /* border: 1px solid blue; */
+        position: relative;
+      }
+
+      .card-box .card:nth-child(2) {
+        margin-bottom: -50px;
+      }
+
+      .card-box .card:nth-child(3) {
+        margin-top: +50px;
+      }
+
+      .card h4 {
+        font-family: "Poppins", serif;
+        font-weight: 600;
+      }
+
+      .card img {
+        height: 25%;
+        margin-right: 25px;
+        margin-bottom: 25px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+
+      .card:nth-child(1) {
+        border-top: 5px solid var(--main-cyan);
+      }
+      .card:nth-child(2) {
+        border-top: 5px solid var(--main-red);
+      }
+      .card:nth-child(3) {
+        border-top: 5px solid var(--main-orange);
+      }
+      .card:nth-child(4) {
+        border-top: 5px solid var(--main-blue);
       }
     </style>
   </head>
